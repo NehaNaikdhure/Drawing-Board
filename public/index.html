@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
+		<link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.svg" />
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<meta
+			name="description"
+			content="Drawing Board App using HTML, CSS, and JavaScript."
+		/>
+		<title>Drawing Board App</title>
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Neha NaikDhure" />
+		<meta name="keywords" content="Drawing Board" />
+		<meta property="og:title" content="Drawing Board" />
+		<meta property="og:description" content="Drawing Board App using HTML, CSS, and
+		JavaScript."/>
+		<meta
+			property="og:image"
+			content="https://clipartix.com/wp-content/uploads/2018/03/whiteboard-clipart-2018-26.jpg"
+		/>
+		<meta property="og:url" content="https://drawing-board-by-neha.web.app" />
+		<meta property="og:type" content="website" />
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="root"></div>
+		<div class="container" id="main_paint_container">
+			<section class="tools-board">
+				<div class="row buttons">
+					<button class="clear-canvas">Clear Board</button>
+					<button class="save-img">Save As Image</button>
+				</div>
+				<div class="row">
+					<label class="title">Options</label>
+					<ul class="options">
+						<li class="option active tool" id="brush">
+							<img src="icons/brush.svg" alt="" />
+							<span>Brush</span>
+						</li>
+						<li class="option tool" id="eraser">
+							<img src="icons/eraser.svg" alt="" />
+							<span>Eraser</span>
+						</li>
+						<li class="option" style="width: 100%;">
+							<input
+								type="range"
+								id="size-slider"
+								min="1"
+								max="30"
+								value="5"
+								style="width: 100%;"
+							/>
+						</li>
+						<li class="option">
+							<input type="checkbox" id="fill-color" />
+							<label for="fill-color">Fill color</label>
+						</li>
+					</ul>
+				</div>
+				<div class="row">
+					<label class="title">Shapes</label>
+					<ul class="options shapes">
+						<li class="option tool" id="rectangle">
+							<img src="icons/rectangle.svg" alt="" />
+							<span>Rectangle</span>
+						</li>
+						<li class="option tool" id="circle">
+							<img src="icons/circle.svg" alt="" />
+							<span>Circle</span>
+						</li>
+						<li class="option tool" id="triangle">
+							<img src="icons/triangle.svg" alt="" />
+							<span>Triangle</span>
+						</li>
+						<li class="option tool" id="line">
+							<img src="icons/line.svg" alt="" style="max-width: 20px;color: gray;"/>
+							<span>Line</span>
+						</li>
+						<li class="option tool" id="eclipse">
+							<img src="icons/oval.svg" alt="" style="max-width: 20px;color: gray;"/>
+							<span>Eclipse</span>
+						</li>
+						<li class="option tool" id="star">
+							<img src="icons/star.svg" alt="" style="max-width: 20px;color: gray;"/>
+							<span>Star</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row colors">
+					<label class="title">Colors</label>
+					<ul class="options">
+						<li class="option"></li>
+						<li class="option selected"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+					</ul>
+				</div>
+				
+			</section>
+			<section class="drawing-board">
+				<canvas></canvas>
+			</section>
+		</div>
+	</body>
+	<script defer src="./script.js"></script>
+</html>
