@@ -155,8 +155,6 @@ sizeSlider.addEventListener("change", () => (brushWidth = sizeSlider.value));
 
 colorBtns.forEach((btn) => {
 	btn.addEventListener("click", () => {
-		
-		
 		document
 			.querySelector(".options .selected")
 			.classList.remove("selected");
@@ -183,3 +181,7 @@ saveImg.addEventListener("click", () => {
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
 canvas.addEventListener("mouseup", () => (isDrawing = false));
+// add for pointer down and up
+canvas.addEventListener("pointerdown", startDraw);
+canvas.addEventListener("pointermove", drawing);
+canvas.addEventListener("pointerup", () => (isDrawing = false));
